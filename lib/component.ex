@@ -156,7 +156,7 @@ defmodule LiveSvelte do
 
   @doc false
   defmacro sigil_V({:<<>>, _meta, [string]}, []) do
-    path = "./assets/svelte/_build/#{__CALLER__.module}.svelte"
+    path = "./assets/user_web/svelte/_build/#{__CALLER__.module}.svelte"
 
     with :ok <- File.mkdir_p(Path.dirname(path)) do
       File.write!(path, string)
